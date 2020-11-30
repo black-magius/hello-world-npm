@@ -1,0 +1,23 @@
+To authenticate by adding your personal access token to your ~/.npmrc file, edit the ~/.npmrc file for your project to include the following line, replacing TOKEN with your personal access token. Create a new ~/.npmrc file if one doesn't exist.
+
+//npm.pkg.github.com/:_authToken=TOKEN
+
+Run publish and your package should successfully publish to github packages!
+
+npm publish
+
+You should now see your package listed in the top bar of your projects main page:
+
+Installing a package
+
+First of all, add a .npmrc in the root of your project.
+
+@yourcompany:registry=https://npm.pkg.github.com
+
+This tells npm to install any packages with a name space of @yourcompany from Github Packages.
+
+Running it in CI/CD
+To run it in your continuous integration/deployment setup, first of all add your personal access token as an environment variable (named as $GITHUB_ACCESS_TOKEN in the example below) in your platform.
+
+Then run this just before you install:
+echo //npm.pkg.github.com/:_authToken=$GITHUB_ACCESS_TOKEN >> ~/.npmrc

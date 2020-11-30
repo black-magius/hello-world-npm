@@ -1,0 +1,19 @@
+{
+  "name": "@black-magius/hello-world-npm",
+  "version": "1.0.1",
+  "description": "Creating Node Package. This is a simple exmaple of creating node pakcage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Magius",
+  "license": "gpl2",
+  "repository": "git://github.com/black-magius/hello-world-npm.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "@black-magius/hello-world-npm": "^1.0.1"
+  }
+}
